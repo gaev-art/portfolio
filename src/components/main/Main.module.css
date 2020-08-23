@@ -2,37 +2,38 @@
 height: 100vh;
 }
 
+.mainContainer{
+    justify-content: space-around;
+}
 
 
 .greeting {
 width: 300px;
-    background-color: #e7e1e1;
-}
+    background-color: #f5eded;}
 
 .photo {
-    width: 400px;
-    height: 600px;
+    width: 350px;
+    height: 500px;
     border: solid 1px;
-    background-color: #e7e1e1;
-}
+    background-color: #f5eded;}
 
 .ph {
-    width: 400px;
-    height: 600px;
+    width: 350px;
+    height: 500px;
 
 
 
 
 }
 
-@media (max-width: 890px) {
+@media (max-width: 470px) {
     .ph {
-        width: 300px;
+        width: 250px;
         height: 400px;
     }
 
     .photo {
-        width: 300px;
+        width: 250px;
         height: 400px;
     }
 }

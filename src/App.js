@@ -1,5 +1,4 @@
 import React from 'react';
-import style from './App.module.css';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
 import Skills from './components/skills/Skills';
@@ -9,7 +8,7 @@ import Footer from './components/footer/Footer';
 
 function App() {
     return (
-        <div className={style.App}>
+        <div>
             <Header/>
             <Main/>
             <Skills/>

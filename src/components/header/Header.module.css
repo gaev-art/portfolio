@@ -3,8 +3,10 @@
     /*border: solid 1px;*/
     display: flex;
 
-    align-items: center;
 }
 
-
+.headerContainer{
+    justify-content: flex-end;
+    /*flex-direction: column;*/
+}
 

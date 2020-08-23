@@ -5,7 +5,7 @@ import NavMenu from './NavMenu/NavMenu';
 
 const Header = () => (
     <div className={style.header}>
-        <div className={containerStyle.container}>
+        <div className={`${style.headerContainer} ${containerStyle.container}`}>
             <NavMenu/>
         </div>
     </div>

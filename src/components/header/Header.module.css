@@ -6,13 +6,5 @@
     align-items: center;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    height: 100%;
-    border: 1px solid black;
-    margin: 0 auto;
-    justify-content: flex-end;
-}
+
 

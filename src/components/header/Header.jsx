@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Header.module.css';
-import NavMenu from "./NavMenu/NavMenu";
+import NavMenu from './NavMenu/NavMenu';
 
 const Header = () => (
     <div className={style.header}>

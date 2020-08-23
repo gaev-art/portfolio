@@ -1,0 +1,29 @@
+.footer {
+    height: 150px;
+
+}
+
+.footerContainer {
+    flex-direction: column;
+    justify-content: space-around;
+    text-transform: none;
+    font-size: 12px;
+
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+
+    width: 330px;
+}
+
+
+@media (max-width: 413px) {
+    .icons {
+        width: 100%;
+    }
+}
+
+
+

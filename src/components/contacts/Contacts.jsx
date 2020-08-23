@@ -6,7 +6,7 @@ import containerStyle from '../../common/styles/container.module.css';
 const Contacts = () => (
 
     <div className={`${containerStyle.container} ${style.skillsContainer}`}>
-        <h3 className={style.heading}>Контакты</h3>
+        <h2 className={style.heading}>Контакты</h2>
         <div className={style.form}>
             <input type='text' placeholder='Name'/>
         </div>

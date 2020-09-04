@@ -1,0 +1,35 @@
+.projectsBlock {
+  background: #202020;
+
+  .projectsContainer {
+    padding: 120px 0;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .projects {
+      border: 1px solid;
+      width: 100%;
+      display: flex;
+
+      justify-content: center;
+      flex-wrap: wrap;
+      @media (max-width: 1200px) {
+        justify-content: center;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+.project {
+  width: 450px;
+  background-color: #f5eded;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+
+  &:hover {
+    background: none;
+    transition: all .3s;
+  }
+
+  .image {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    margin-bottom: 19px;
+    font-weight: 500;
+    line-height: 1.4074;
+    color: #fff;
+  }
+
+  .projectDescription {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 400;
+    color: rgba(198, 201, 216, 0.75);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

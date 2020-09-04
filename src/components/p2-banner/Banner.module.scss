@@ -1,0 +1,52 @@
+.main {
+  min-height: 100vh;
+  background-image: url('./bg-image-28.jpg');
+  background-position: 60%;
+  background-size: cover;
+
+  .mainContainer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .greeting {
+      padding: 250px 0;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+
+      & h4 {
+        position: relative;
+        margin-bottom: 0;
+        display: inline-block;
+
+      }
+
+      @media (max-width: 630px) {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

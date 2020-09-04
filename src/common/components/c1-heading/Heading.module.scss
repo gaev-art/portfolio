@@ -1,0 +1,21 @@
+.heading {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.4074;
+  font-size: 45px;
+  margin: 0 0 30px;
+
+  & h2 {
+    margin: 0;
+  }
+
+  @media (max-width: 630px) {
+    font-size: 25px;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,28 @@
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .link {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 30px;
+  }
+
+  @media (max-width: 550px) {
+    display: none;
+
+  }
+
+  .navMenuIcon {
+    @media (max-width: 700px) {
+      display: none;
+
+    }
+  }
+}
+
+
+
+

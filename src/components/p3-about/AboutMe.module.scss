@@ -1,0 +1,72 @@
+.main {
+  background: #202020;
+
+  .mainContainer {
+    padding: 120px 0;
+    justify-content: space-around;
+
+    .photo {
+      width: 350px;
+      height: 500px;
+      @media (max-width: 470px) {
+        width: 250px;
+        height: 350px;
+      }
+
+      .ph {
+        width: 350px;
+        height: 500px;
+        @media (max-width: 470px) {
+          width: 250px;
+          height: 350px;
+        }
+      }
+    }
+
+    .greeting {
+      width: 40%;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.2em;
+      margin-bottom: 30px;
+      text-align: center;
+
+      @media (max-width: 1500px) {
+        width: 80%
+
+      }
+
+
+      & h2 {
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        line-height: 1.4074;
+        font-size: 60px;
+        margin-bottom: 15px;
+        @media (max-width: 925px) {
+          font-size: 25px;
+        }
+
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

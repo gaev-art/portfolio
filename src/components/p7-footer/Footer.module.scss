@@ -1,0 +1,40 @@
+@import "src/common/styles/sass/variables";
+
+.footer {
+  background: #202020;
+  font-family: $fontFamily;
+
+  .footerContainer {
+    flex-direction: column;
+    justify-content: space-around;
+    text-transform: none;
+    font-size: 14px;
+    color: #fff;
+
+    .icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 330px;
+      @media (max-width: 413px) {
+        width: 100%;
+      }
+    }
+
+    .text {
+      padding: 10px 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

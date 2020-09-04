@@ -1,0 +1,21 @@
+.header {
+  height: 80px;
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  top: -20px;
+  z-index: 999;
+  .headerContainer {
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+}
+
+
+/*@media (max-width: 1000px) {*/
+/*    .header {*/
+/*       min-width: 500px;*/
+/*    }*/
+/*}*/
+

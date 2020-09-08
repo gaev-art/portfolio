@@ -5,14 +5,11 @@ import containerStyle from '../../common/styles/container.module.scss';
 
 const Banner = () => (
     <div className={style.main}>
-        <div className={`${style.mainContainer} ${containerStyle.container}`}>
+        <div className={` ${containerStyle.container}`}>
             <div className={style.greeting}>
-                <h4> I’m Gaev Artsiom</h4>
-                <h2>Front-End Developer</h2>
+                <h4>Gaev Artsiom</h4>
+                <h2>Front-End <br/> Developer</h2>
             </div>
-
-
-
         </div>
     </div>
 );

@@ -1,5 +1,9 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+
 .main {
-  background: #202020;
+  background: $bgColor_1;
 
   .mainContainer {
     padding: 120px 0;
@@ -24,12 +28,13 @@
     }
 
     .greeting {
-      width: 40%;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
+      width: 50%;
+      color: $textColor;
+      font-family: $fontFamily;
       line-height: 1.2em;
       margin-bottom: 30px;
       text-align: center;
+      position: relative;
 
       @media (max-width: 1500px) {
         width: 80%
@@ -38,16 +43,67 @@
 
 
       & h2 {
-        color: #fff;
-        font-family: 'Poppins', sans-serif;
+        @include text($fontFamily,60px, 1.4074);
         font-weight: 700;
-        line-height: 1.4074;
-        font-size: 60px;
         margin-bottom: 15px;
-        @media (max-width: 925px) {
-          font-size: 25px;
+        @media (max-width: 625px) {
+          font-size: 40px;
         }
 
+      }
+      .cool{
+        position: relative;
+        width: 100%;
+
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      .tabStyle{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -10px;
+
+        flex-wrap: wrap;
+      }
+      .reactTabsTab {
+        position: relative;
+        margin: 0 20px;
+        display: inline-block;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        outline: none;
+        &:before {
+          position: absolute;
+          content: "";
+          width: 30px;
+          background: $bgColor_1;
+          -webkit-transition: all .7s cubic-bezier(.19,1,.22,1) 0s;
+          transition: all .7s cubic-bezier(.19,1,.22,1) 0s;
+          height: 2px;
+          bottom: 0;
+        }
+      }
+      .reactTabsTabSelected {
+        position: relative;
+        margin: 0 20px;
+        display: inline-block;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        outline: none;
+        &:before {
+          position: absolute;
+          content: "";
+          width: 30px;
+          background: $textColor;
+          -webkit-transition: all .7s cubic-bezier(.19,1,.22,1) 0s;
+          transition: all .7s cubic-bezier(.19,1,.22,1) 0s;
+          height: 2px;
+          bottom: 0;
+        }
       }
     }
   }

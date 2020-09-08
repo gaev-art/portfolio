@@ -1,21 +1,15 @@
 .header {
+  color: black;
   height: 80px;
   width: 100%;
-  background: transparent;
+  background:inherit;
   position: absolute;
-  top: -20px;
+  //top: -35px;
   z-index: 999;
   .headerContainer {
-    justify-content: flex-end;
-    flex-direction: column;
+    //justify-content: space-between;
   }
 
+
 }
-
-
-/*@media (max-width: 1000px) {*/
-/*    .header {*/
-/*       min-width: 500px;*/
-/*    }*/
-/*}*/
 

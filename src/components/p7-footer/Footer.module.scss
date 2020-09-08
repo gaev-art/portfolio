@@ -9,7 +9,7 @@
     justify-content: space-around;
     text-transform: none;
     font-size: 14px;
-    color: #fff;
+    color: $textColor;
 
     .icons {
       display: flex;
@@ -22,7 +22,8 @@
     }
 
     .text {
-      padding: 10px 0;
+      padding: 25px 0;
+      font-size: 12px;
     }
   }
 }

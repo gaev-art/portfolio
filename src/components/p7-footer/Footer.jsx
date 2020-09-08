@@ -7,7 +7,7 @@ import containerStyle from '../../common/styles/container.module.scss';
 const Footer = () => (
     <div className={style.footer}>
         <div className={`${containerStyle.container} ${style.footerContainer}`}>
-            <h2>Гаев Артём</h2>
+            <h2>Gaev Artsiom</h2>
             <div className={style.icons}>
                 <a href='https://github.com/gaev-art' >
                     <FontAwesomeIcon icon={faGithub} size='3x' color="#fff"/>
@@ -19,7 +19,7 @@ const Footer = () => (
                     <FontAwesomeIcon icon={faTelegram} size='3x' color="#fff"/>
                 </a>
             </div>
-            <div className={style.text}>&#169; 2020 Все права защищены</div>
+            <div className={style.text}>&#169;  2020 Belarus/Minsk, All Rights Reserved.</div>
         </div>
     </div>
 );

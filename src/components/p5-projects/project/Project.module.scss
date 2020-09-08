@@ -1,40 +1,78 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
 .project {
   width: 450px;
-  background-color: #f5eded;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-  padding: 10px;
+  position: relative;
 
   &:hover {
-    background: none;
-    transition: all .3s;
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: black;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.9;
+
+    }
+
+    &:hover .projectInfo {
+      bottom: 0;
+      visibility: visible;
+      transition: all .3s;
+    }
   }
+
 
   .image {
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
   }
 
-  .projectTitle {
-    font-family: 'Poppins', sans-serif;
-    font-size: 19px;
-    margin-bottom: 19px;
-    font-weight: 500;
-    line-height: 1.4074;
-    color: #fff;
+  .projectInfo {
+    padding: 25px 20px;
+    position: absolute;
+    bottom: -220px;
+    width: 100%;
+    z-index: 3;
+    visibility: hidden;
+
+
+    .projectTitle {
+      @include text($fontFamily, 30px, 1.4074);
+      margin-bottom: 19px;
+      font-weight: 500;
+
+    }
+
+    .projectDescription {
+      font-family: $fontFamily;
+      font-size: 17px;
+      line-height: 30px;
+      font-weight: 400;
+      color: $textColor
+    }
+    .btn{
+      padding: 10px 20px;
+      background: #302e2e;
+
+    }
+
   }
 
-  .projectDescription {
-    font-family: 'Poppins', sans-serif;
-    font-size: 17px;
-    line-height: 30px;
-    font-weight: 400;
-    color: rgba(198, 201, 216, 0.75);
-  }
+
 }
 
 

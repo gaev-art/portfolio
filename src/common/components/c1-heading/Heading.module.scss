@@ -1,6 +1,9 @@
+@import "src/common/styles/sass/variables";
+
+
 .heading {
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
+  color: $textColor;
+  font-family: $fontFamily;
   font-weight: 700;
   line-height: 1.4074;
   font-size: 45px;
@@ -11,7 +14,7 @@
   }
 
   @media (max-width: 630px) {
-    font-size: 25px;
+    font-size: 35px;
   }
 }
 

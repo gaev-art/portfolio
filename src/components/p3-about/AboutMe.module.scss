@@ -3,110 +3,113 @@
 
 
 .main {
-  background: $bgColor_1;
+    background: $bgColor_1;
 
-  .mainContainer {
-    padding: 120px 0;
-    justify-content: space-around;
+    .mainContainer {
+        padding: 120px 0;
+        @include container();
+        @include flex(row, space-around, center, wrap);
 
-    .photo {
-      width: 350px;
-      height: 500px;
-      @media (max-width: 470px) {
-        width: 250px;
-        height: 350px;
-      }
+        .photo {
+            width: 350px;
+            height: 500px;
 
-      .ph {
-        width: 350px;
-        height: 500px;
-        @media (max-width: 470px) {
-          width: 250px;
-          height: 350px;
+            @media (max-width: 470px) {
+                width: 250px;
+                height: 350px;
+
+            }
+
+            .ph {
+                width: 350px;
+                height: 500px;
+
+                @media (max-width: 470px) {
+                    width: 250px;
+                    height: 350px;
+
+                }
+            }
         }
-      }
+
+        .greeting {
+            @include text($fontFamily_1, 17px, 1.2em, 400);
+            width: 50%;
+            margin-bottom: 30px;
+            text-align: center;
+
+            @media (max-width: 1500px) {
+                width: 80%
+
+            }
+
+            & h2 {
+                @include text($fontFamily_1, 60px, 1.4074, 700);
+                margin-bottom: 15px;
+
+                @media (max-width: 625px) {
+                    font-size: 40px;
+                }
+            }
+
+
+            .table {
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+
+                .row {
+                    @include flex(row, center, center, wrap);
+                    margin: 0 -20px;
+                    padding: 0;
+
+                    .active {
+                        @include text($fontFamily_2, 20px, 1.2em, 700);
+                        color: $accentColor;
+                        margin: 10px;
+                        display: inline-block;
+                        padding-bottom: 4px;
+                    }
+
+                    .rowItem {
+                        @include text($fontFamily_2, 20px, 1.2em, 700);
+                        margin: 10px;
+                        display: inline-block;
+                        padding-bottom: 4px;
+
+                    }
+                }
+
+                .column {
+                    .contentColumn {
+                        height: 270px;
+
+                        & ul {
+                            padding: 0;
+
+                        }
+
+                        & li {
+                            @include text($fontFamily_2, 16px, 1.2em, 300);
+                            color: $descriptionTextColor;
+                            margin-bottom: 15px;
+                            padding: 0;
+                            list-style: none;
+
+
+                            & a {
+                                text-decoration: none;
+                                color: $descriptionTextColor;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-
-    .greeting {
-      width: 50%;
-      color: $textColor;
-      font-family: $fontFamily;
-      line-height: 1.2em;
-      margin-bottom: 30px;
-      text-align: center;
-      position: relative;
-
-      @media (max-width: 1500px) {
-        width: 80%
-
-      }
-
-
-      & h2 {
-        @include text($fontFamily,60px, 1.4074);
-        font-weight: 700;
-        margin-bottom: 15px;
-        @media (max-width: 625px) {
-          font-size: 40px;
-        }
-
-      }
-      .cool{
-        position: relative;
-        width: 100%;
-
-        padding-right: 15px;
-        padding-left: 15px;
-      }
-      .tabStyle{
-        display: flex;
-        justify-content: space-between;
-        margin: 0 -10px;
-
-        flex-wrap: wrap;
-      }
-      .reactTabsTab {
-        position: relative;
-        margin: 0 20px;
-        display: inline-block;
-        padding: 10px;
-        font-size: 18px;
-        font-weight: 500;
-        cursor: pointer;
-        outline: none;
-        &:before {
-          position: absolute;
-          content: "";
-          width: 30px;
-          background: $bgColor_1;
-          -webkit-transition: all .7s cubic-bezier(.19,1,.22,1) 0s;
-          transition: all .7s cubic-bezier(.19,1,.22,1) 0s;
-          height: 2px;
-          bottom: 0;
-        }
-      }
-      .reactTabsTabSelected {
-        position: relative;
-        margin: 0 20px;
-        display: inline-block;
-        padding: 10px;
-        font-size: 18px;
-        font-weight: 500;
-        cursor: pointer;
-        outline: none;
-        &:before {
-          position: absolute;
-          content: "";
-          width: 30px;
-          background: $textColor;
-          -webkit-transition: all .7s cubic-bezier(.19,1,.22,1) 0s;
-          transition: all .7s cubic-bezier(.19,1,.22,1) 0s;
-          height: 2px;
-          bottom: 0;
-        }
-      }
-    }
-  }
 }
 
 

@@ -1,43 +1,46 @@
 @import "src/common/styles/sass/variables";
 @import "src/common/styles/sass/mixins";
 
-.main {
-  //min-height: 100vh;
-  height: 950px;
-  background-image: url('./bg-image-28.jpg');
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  position: relative;
+.banner {
+    height: 950px;
+    background-image: url('../../images/bg-image-28.jpg');
+    background-size: cover;
+    background-position: 60%;
+    background-repeat: no-repeat;
+    position: relative;
 
-  @media (max-width: 700px) {
-    height: auto;
-  }
+    @media (max-width: 700px) {
+        height: auto;
+    }
 
-    .greeting {
-      @include text($fontFamily,45px,1.2em);
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 30px;
-      position: relative;
-      width: 100%;
-      padding-right: 15px;
-      padding-left: 15px;
-      //position: absolute;
-      //bottom: 300px;
+    .bannerContainer {
+        @include container();
+        @include flex(row, center, center, nowrap);
 
 
-      @media (max-width: 1050px) {
-        padding: 200px 0;
-        font-size: 35px;
+        .greeting {
+            @include text($fontFamily_2, 45px, 1.2em, 700);
+            width: 100%;
+            position: relative;
+            margin-bottom: 30px;
+            padding-right: 15px;
+            padding-left: 150px;
 
-      }
-      @media (max-width: 700px) {
-        //justify-content: center;
-        padding: 150px 0;
-        font-size: 25px;
-        //bottom: -15px;
-      }
+            @media (max-width: 1050px) {
+                padding: 200px 0;
+                font-size: 35px;
+
+            }
+            @media (max-width: 700px) {
+                padding: 130px 0;
+                font-size: 25px;
+
+            }
+
+            & h2 {
+                color: $accentColor;
+            }
+        }
     }
 
 }

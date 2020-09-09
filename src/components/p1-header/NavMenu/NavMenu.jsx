@@ -20,7 +20,6 @@ function NavMenu() {
             <div className={style.menu}>
                 <a href="/" className={style.link}>Home</a>
                 <a href="/" className={style.link}>About</a>
-                <a href="/" className={style.link}>Skills</a>
                 <a href="/" className={style.link}>Projects</a>
                 <a href="/" className={style.link}>Contacts</a>
             </div>

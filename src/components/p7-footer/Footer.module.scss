@@ -1,31 +1,42 @@
 @import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 .footer {
-  background: #202020;
-  font-family: $fontFamily;
+    background: $bgColor_2;
+    font-family: $fontFamily_1;
 
-  .footerContainer {
-    flex-direction: column;
-    justify-content: space-around;
-    text-transform: none;
-    font-size: 14px;
-    color: $textColor;
+    .footerContainer {
+        @include container();
+        @include flex(column, space-around, center, wrap);
+        text-transform: none;
+        font-size: 14px;
+        color: $textColor;
 
-    .icons {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 330px;
-      @media (max-width: 413px) {
-        width: 100%;
-      }
+        .icons {
+            @include flex(row, space-between, center, wrap);
+            width: 330px;
+
+            @media (max-width: 413px) {
+                width: 100%;
+            }
+
+            & .icon {
+                text-decoration: none;
+                color: $textColor;
+
+                & :hover {
+                    transform: translateY(-3px);
+                    color: $accentColor;
+
+                }
+            }
+        }
+
+        .text {
+            padding: 25px 0;
+            font-size: 12px;
+        }
     }
-
-    .text {
-      padding: 25px 0;
-      font-size: 12px;
-    }
-  }
 }
 
 

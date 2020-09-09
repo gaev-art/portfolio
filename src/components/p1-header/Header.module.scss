@@ -1,15 +1,20 @@
-.header {
-  color: black;
-  height: 80px;
-  width: 100%;
-  background:inherit;
-  position: absolute;
-  //top: -35px;
-  z-index: 999;
-  .headerContainer {
-    //justify-content: space-between;
-  }
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
+
+
+.header {
+    height: 80px;
+    width: 100%;
+    background: inherit;
+    position: absolute;
+    z-index: 999;
+
+    .headerContainer {
+        @include container();
+        @include flex(row, center, center, wrap);
+
+    }
 
 }
 

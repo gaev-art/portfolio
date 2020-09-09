@@ -1,21 +1,17 @@
 @import "src/common/styles/sass/variables";
-
+@import "src/common/styles/sass/mixins";
 
 .heading {
-  color: $textColor;
-  font-family: $fontFamily;
-  font-weight: 700;
-  line-height: 1.4074;
-  font-size: 45px;
-  margin: 0 0 30px;
+    @include text($fontFamily_1, 45px, 1.4074, 700);
+    margin: 0 0 30px;
 
-  & h2 {
-    margin: 0;
-  }
+    & h2 {
+        margin: 0;
+    }
 
-  @media (max-width: 630px) {
-    font-size: 35px;
-  }
+    @media (max-width: 630px) {
+        font-size: 35px;
+    }
 }
 
 

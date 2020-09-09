@@ -4,6 +4,7 @@
 
 .main {
     background: $bgColor_1;
+    min-height: 100vh;
 
     .mainContainer {
         padding: 120px 0;
@@ -38,6 +39,7 @@
             margin-bottom: 30px;
             text-align: center;
 
+
             @media (max-width: 1500px) {
                 width: 80%
 
@@ -49,6 +51,7 @@
 
                 @media (max-width: 625px) {
                     font-size: 40px;
+                    letter-spacing: 1px;
                 }
             }
 
@@ -68,9 +71,20 @@
                     .active {
                         @include text($fontFamily_2, 20px, 1.2em, 700);
                         color: $accentColor;
-                        margin: 10px;
+                        margin: 20px;
                         display: inline-block;
                         padding-bottom: 4px;
+                        position: relative;
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            background:$accentColor;
+                            width: 40%;
+                            height: 3px;
+                            bottom: -1px;
+                            left: 50%;
+                            transform: translate(-50%,50%);
+                        }
                     }
 
                     .rowItem {
@@ -105,6 +119,7 @@
 
                             }
                         }
+
                     }
                 }
             }

@@ -6,8 +6,9 @@
 .header {
     height: 80px;
     width: 100%;
-    background: inherit;
-    position: absolute;
+    background: $bgColor_2;
+
+    position: fixed;
     z-index: 999;
 
     .headerContainer {

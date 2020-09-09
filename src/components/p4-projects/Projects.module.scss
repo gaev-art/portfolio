@@ -4,6 +4,7 @@
 
 .projectsBlock {
     background: $bgColor_2;
+    min-height: 100vh;
 
     .projectsContainer {
         @include container();

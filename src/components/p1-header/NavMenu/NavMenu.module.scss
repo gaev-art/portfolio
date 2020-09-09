@@ -6,7 +6,7 @@
     justify-content: space-between;
     width: 100%;
 
-    .menu {
+    .menuItems {
         width: 300px;
         @include flex(row, space-between, center, nowrap);
 
@@ -15,10 +15,9 @@
 
         }
 
-
     }
 
-    .navMenuIcon {
+    .MenuIcons {
         width: 100px;
         @include flex(row, space-between, center, nowrap);
 
@@ -26,18 +25,10 @@
             display: none;
 
         }
-        & .link:hover{
-            transform: translateY(-3px);
-            color: $accentColor;
-        }
 
     }
 
-    .link {
-        text-decoration: none;
-        color: $textColor;
 
-    }
 }
 
 

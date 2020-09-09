@@ -3,7 +3,10 @@
 
 .heading {
     @include text($fontFamily_1, 45px, 1.4074, 700);
+    text-transform: capitalize;
+    letter-spacing: 5px;
     margin: 0 0 30px;
+    text-align: center;
 
     & h2 {
         margin: 0;

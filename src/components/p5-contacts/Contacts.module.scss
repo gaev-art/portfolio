@@ -3,6 +3,7 @@
 
 .contactBlock {
     background: $bgColor_1;
+    min-height: 85vh;
 
     .skillsContainer {
         @include container();
@@ -12,6 +13,10 @@
         .form {
             width: 40%;
             @include flex(column, flex-start, center, wrap);
+
+            @media (max-width: 700px) {
+                width: 80%;
+            }
 
             & input, & textarea {
                 width: 100%;
@@ -28,6 +33,7 @@
             .submitBtn {
                 border-radius: 4px;
                 font-size: 14px;
+                font-weight: 700;
                 padding: 0 23px;
                 height: 40px;
                 display: inline-block;
@@ -47,9 +53,7 @@
                 }
             }
 
-            @media (max-width: 700px) {
-                width: 80%;
-            }
+
         }
     }
 

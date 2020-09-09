@@ -3,7 +3,7 @@
 
 .banner {
     height: 950px;
-    background-image: url('../../images/bg-image-28.jpg');
+    background-image: url('../../assets/images/bg-image-28.jpg');
     background-size: cover;
     background-position: 60%;
     background-repeat: no-repeat;
@@ -19,26 +19,28 @@
 
 
         .greeting {
-            @include text($fontFamily_2, 45px, 1.2em, 700);
+            @include text($fontFamily_1, 55px, 1.2em, 700);
             width: 100%;
+            margin: 0 0 30px;
             position: relative;
-            margin-bottom: 30px;
             padding-right: 15px;
             padding-left: 150px;
 
-            @media (max-width: 1050px) {
+            @media (max-width: 1300px) {
                 padding: 200px 0;
                 font-size: 35px;
+                letter-spacing: 3px;
 
             }
-            @media (max-width: 700px) {
-                padding: 130px 0;
+            @media (max-width: 830px) {
+                padding: 100px 0;
                 font-size: 25px;
-
+                letter-spacing: 1px;
             }
 
-            & h2 {
+            span {
                 color: $accentColor;
+                font-size: 70px;
             }
         }
     }

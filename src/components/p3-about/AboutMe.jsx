@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import style from './AboutMe.module.scss';
-import photo from '../../images/photo.jpg'
+import photo from '../../assets/images/photo.jpg'
+import Heading from '../../common/components/c1-heading/Heading';
 
 
 const AboutMe = () => {
@@ -26,13 +27,13 @@ const AboutMe = () => {
     const classForEducation = filter === 'education' ? `${style.active}` : `${style.rowItem}`;
 
 
-    return <div className={style.main}>
+    return <div id='about' className={style.main}>
         <div className={style.mainContainer}>
             <div className={style.photo}>
                 <img className={style.ph} src={photo} alt=''/>
             </div>
             <div className={style.greeting}>
-                <h2>About Me</h2>
+                <Heading heading={'About Me'}/>
                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
                     alteration in some form, by injected humour, or randomised words which don't look even slightly
                     believable. If you are going to use a passage of Lorem Ipsum by injected humour, or randomised words
@@ -65,7 +66,7 @@ const AboutMe = () => {
                         {column === 'experience'
                             ? <div className={style.contentColumn}>
                                 <ul>
-                                    <li>Freelance</li>
+                                    <li>Freelance - February 2020</li>
                                 </ul>
                             </div> : ''}
                         {column === 'education'

@@ -6,7 +6,8 @@
 .header {
     height: 80px;
     width: 100%;
-    background: $bgColor_2;
+    background: inherit;
+    //background: $bgColor_2;
 
     position: fixed;
     z-index: 999;

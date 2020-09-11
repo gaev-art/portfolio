@@ -7,7 +7,7 @@ import Fade from 'react-reveal/Fade';
 const Contacts = () => (
     <div id='contacts' className={style.contactBlock}>
         <div className={style.skillsContainer}>
-            <Heading heading={'Hire Me.'}/>
+            <Heading heading={'Hire Me'}/>
             <Fade left cascade>
             <form className={style.form}>
                 <input type='text' placeholder='Name'/>

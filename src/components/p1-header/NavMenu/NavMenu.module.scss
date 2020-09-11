@@ -10,6 +10,7 @@
         width: 300px;
         @include flex(row, space-between, center, nowrap);
 
+
         @media (max-width: 520px) {
             width: 100%;
 

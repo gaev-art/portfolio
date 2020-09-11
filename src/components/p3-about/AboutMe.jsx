@@ -1,7 +1,35 @@
 import React, {useState} from 'react';
 import style from './AboutMe.module.scss';
-import photo from '../../assets/images/photo.jpg'
+import photo from '../../assets/images/photo-2.jpg'
+// import photo from '../../assets/images/photo.jpg'
 import Heading from '../../common/components/c1-heading/Heading';
+import {faStar, faStarHalfAlt} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
+
+const Stars = (props) => {
+
+    const starElements = new Array(Number(props.stars))
+    const halfStarElements = new Array(Number(props.halfStar))
+
+
+    const star = []
+    const halfStar = []
+
+    for (const [index] of starElements.entries()) {
+        star.push(<FontAwesomeIcon key={index} icon={faStar} color={'gold'}/>)
+    }
+    for (const [index] of halfStarElements.entries()) {
+        halfStar.push(<FontAwesomeIcon key={index} icon={faStarHalfAlt} color='gold'/>)
+    }
+
+    return (
+        <div style={{padding:"5px"}}>
+            {star}{halfStar}
+        </div>
+
+    );
+}
 
 
 const AboutMe = () => {
@@ -52,29 +80,64 @@ const AboutMe = () => {
                     <div className={style.column}>
                         {column === 'skill'
                             ? <div className={style.contentColumn}>
-                                <ul>
-                                    <li>JavaScript</li>
-                                    <li>ReactJS</li>
-                                    <li>Redux</li>
-                                    <li>TypeScript</li>
-                                    <li>Rest API, Json, CRUD API</li>
-                                    <li>HTML</li>
-                                    <li>CSS3, SASS</li>
-                                    <li>Git & GitHub</li>
+                                <ul className={style.contentSkills}>
+                                    <div>
+                                        <li>
+                                            JavaScript
+                                            <Stars stars={'4'} halfStar={'1'}/>
+                                        </li>
+                                        <li>
+                                            ReactJS
+                                            <Stars stars={'5'} halfStar={'0'}/>
+                                        </li>
+                                        <li>
+                                            TypeScript
+                                            <Stars stars={'3'} halfStar={'1'}/>
+                                        </li>
+                                        <li>
+                                            Redux
+                                            <Stars stars={'5'} halfStar={'0'}/>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li>
+                                            HTML
+                                            <Stars stars={'5'} halfStar={'0'}/>
+                                        </li>
+                                        <li>
+                                            CSS3, SASS
+                                            <Stars stars={'5'} halfStar={'0'}/>
+                                        </li>
+                                        <li>
+                                            Rest API, Json, CRUD API
+                                            <Stars stars={'4'} halfStar={'1'}/>
+                                        </li>
+                                        <li>
+                                            Git & GitHub
+                                            <br/>
+                                            <Stars stars={'4'} halfStar={'0'}/>
+
+                                        </li>
+                                    </div>
                                 </ul>
                             </div> : ''}
                         {column === 'experience'
                             ? <div className={style.contentColumn}>
                                 <ul>
-                                    <li>Freelance - February 2020</li>
+                                    <li>Freelance - May 2020</li>
                                 </ul>
                             </div> : ''}
                         {column === 'education'
                             ? <div className={style.contentColumn}>
                                 <ul>
-                                    <li><a href="https://it-incubator.by/">IT-INCUBATOR (ReactJS, Redux,
-                                        Rest API, TypeScript)
-                                        <span> - Belarus, Minsk</span></a> <br/> February 2020
+                                    <li>
+                                        <a style={{color: '#2fb529'}} href="https://it-incubator.by/">IT-INCUBATOR </a>
+                                        <span>
+                                            (ReactJS, Redux,Rest API, TypeScript) - Belarus, Minsk
+                                        </span>
+
+                                        <br/>
+                                        February 2020
                                     </li>
                                     <li>Home study (HTML, CSS, JS) - Belarus, Minsk <br/> September 2019
                                     </li>

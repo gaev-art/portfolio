@@ -3,7 +3,7 @@ import Header from './p1-header/Header';
 import Banner from './p2-banner/Banner';
 import AboutMe from './p3-about/AboutMe';
 import Projects from './p4-projects/Projects';
-import Contacts from './p5-contacts/Contacts';
+import Contacts from './p5-contacts/ui/Contacts';
 import Footer from './p6-footer/Footer';
 import {animateScroll as scroll} from 'react-scroll'
 import ScrollToTop from './p7-scrollToTop/ScrollToTop';

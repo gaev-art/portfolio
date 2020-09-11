@@ -4,10 +4,8 @@
 
 
 .header {
-    height: 80px;
     width: 100%;
-    background: inherit;
-    //background: $bgColor_2;
+    background: $bgColor_2;
 
     position: fixed;
     z-index: 999;
@@ -15,6 +13,68 @@
     .headerContainer {
         @include container();
         @include flex(row, center, center, wrap);
+
+    }
+    .menuIconWrapper {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 520px) {
+            display: none;
+
+        }
+
+        .menuIcon {
+            position: relative;
+            width: 50px;
+            height: 5px;
+            background-color: $accentColor;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                top: -10px;
+                content: '';
+                display: block;
+                width: 50px;
+                height: 5px;
+                background-color: $accentColor;
+                transition: transform 0.2s ease-in 0.2s, top 0.2s linear;
+
+            }
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 10px;
+                content: '';
+                display: block;
+                width: 50px;
+                height: 5px;
+                background-color: $accentColor;
+                transition: transform 0.2s ease-in 0.2s, top 0.2s linear;
+
+
+            }
+
+        }
+        .menuIconActive {
+            background-color: transparent;
+
+            &::before {
+                transform: rotate(45deg);
+                top: 0;
+                transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+
+            }
+            &::after {
+                transform: rotate(-45deg);
+                top: 0;
+                transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+
+            }
+        }
 
     }
 

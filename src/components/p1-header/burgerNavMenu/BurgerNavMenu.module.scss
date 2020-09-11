@@ -1,0 +1,36 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.navMenu {
+    @include flex(column-reverse, space-between, center, nowrap);
+    //width: 300px;
+    //background: red;
+
+
+    .menuItems {
+        @include flex(column, space-between, center, nowrap);
+        //width: 300px;
+
+
+
+
+
+    }
+
+    .MenuIcons {
+        width: 100px;
+        margin: 10px;
+        @include flex(row, space-between, center, nowrap);
+
+    }
+
+    @media (min-width: 520px) {
+        display: none;
+
+    }
+
+}
+
+
+
+

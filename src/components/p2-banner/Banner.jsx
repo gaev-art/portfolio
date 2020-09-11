@@ -16,6 +16,7 @@ const Banner = () => (
                     <h5>from Belarus</h5>
                     <Button value={'CV'}/>
                 </div>
+                <div></div>
             </Fade>
         </div>
     </div>

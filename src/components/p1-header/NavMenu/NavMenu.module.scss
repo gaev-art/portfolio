@@ -2,19 +2,19 @@
 @import "src/common/styles/sass/mixins";
 
 .navMenu {
-    display: flex;
-    justify-content: space-between;
+    @include flex(row, space-between, center, nowrap);
     width: 100%;
+    @media (max-width: 520px) {
+        display: none;
+
+    }
 
     .menuItems {
         width: 300px;
         @include flex(row, space-between, center, nowrap);
 
 
-        @media (max-width: 520px) {
-            width: 100%;
 
-        }
 
     }
 
@@ -22,10 +22,7 @@
         width: 100px;
         @include flex(row, space-between, center, nowrap);
 
-        @media (max-width: 520px) {
-            display: none;
 
-        }
 
     }
 

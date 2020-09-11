@@ -2,7 +2,7 @@
 @import "src/common/styles/sass/mixins";
 
 .banner {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('../../assets/images/bgBanner.jpg');
   background-size: cover;
   background-position: 60%;
@@ -20,17 +20,17 @@
       width: 100%;
       margin: 0 0 30px;
       position: relative;
-      padding-right: 15px;
-      padding-left: 150px;
+      //padding-right: 15px;
+      padding: 150px 0 0;
 
       @media (max-width: 1300px) {
-        padding: 200px 0;
+        padding: 200px 0 0;
         font-size: 35px;
         letter-spacing: 3px;
 
       }
       @media (max-width: 830px) {
-        padding: 100px 0;
+        padding: 130px 0 0;
         font-size: 25px;
         letter-spacing: 1px;
       }

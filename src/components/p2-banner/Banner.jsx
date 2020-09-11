@@ -13,10 +13,10 @@ const Banner = () => (
                 <div className={style.greeting}>
                     <h3>Gaev Artsiom</h3>
                     <ReactTypingEffect text={`React Developer`}/>
+                    {/*<ReactTypingEffect text={`Front-end Developer`}/>*/}
                     <h5>from Belarus</h5>
                     <Button value={'CV'}/>
                 </div>
-                <div></div>
             </Fade>
         </div>
     </div>

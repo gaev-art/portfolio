@@ -16,6 +16,7 @@
         height: 700px;
         border-radius: 5px;
 
+
         @media (max-width: 625px) {
           height: 400px;
 
@@ -64,7 +65,7 @@
             padding: 0;
 
           .active {
-            @include text($fontFamily_2, 20px, 1.2em, 700);
+            @include text($fontFamily_2, 18px, 1.2em, 700);
             color: $accentColor;
             margin: 20px;
             display: inline-block;

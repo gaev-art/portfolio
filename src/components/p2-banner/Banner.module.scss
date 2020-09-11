@@ -2,11 +2,12 @@
 @import "src/common/styles/sass/mixins";
 
 .banner {
-  min-height: 100vh;
+  height: 100vh;
   background-image: url('../../assets/images/bgBanner.jpg');
   background-size: cover;
   background-position: 60%;
   background-repeat: no-repeat;
+  //background: -webkit-linear-gradient(top, transparent, $bgColor_2 50px);
   position: relative;
 
 

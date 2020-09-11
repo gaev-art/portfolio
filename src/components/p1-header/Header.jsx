@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 import style from './Header.module.scss';
-import NavMenu from './NavMenu/NavMenu';
+import NavMenu from './navMenu/NavMenu';
 import BurgerNavMenu from './burgerNavMenu/BurgerNavMenu';
+import BurgerButton from './burgerNavMenu/burgerButton/BurgerButton';
 
 
 const Header = () => {
 
-    const [editMode, setEditMode] = useState(false)
+    const [editMode, setEditMode] = useState(true)
 
-    const burgerMenu = editMode ? style.menuIcon : style.menuIcon + ' ' + style.menuIconActive;
 
-    const onClickHandler=()=>{
+    const onClickHandler = () => {
         setEditMode(!editMode)
     }
 
@@ -19,9 +19,9 @@ const Header = () => {
             <div className={style.headerContainer}>
                 <NavMenu/>
                 {!editMode && <BurgerNavMenu/>}
-                <div className={style.menuIconWrapper} onClick={onClickHandler}>
-                    <div className={burgerMenu}></div>
-                </div>
+                <BurgerButton
+                    editMode={editMode}
+                    onClickBurgerButton={onClickHandler}/>
             </div>
         </header>
     )

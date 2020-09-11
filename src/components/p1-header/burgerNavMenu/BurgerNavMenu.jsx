@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './BurgerNavMenu.module.scss';
 import {faInstagram, faLinkedinIn, faTelegram} from '@fortawesome/free-brands-svg-icons';
-import MenuIcon from './Icon/MenuIcon';
-import MenuItem from './Item/MenuItem';
+import MenuIcon from './icon/MenuIcon';
+import MenuItem from './item/MenuItem';
 
 
 const BurgerNavMenu = () => (

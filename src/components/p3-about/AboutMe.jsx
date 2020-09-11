@@ -24,7 +24,7 @@ const Stars = (props) => {
     }
 
     return (
-        <div style={{padding:"5px"}}>
+        <div style={{padding: '5px'}}>
             {star}{halfStar}
         </div>
 
@@ -73,9 +73,7 @@ const AboutMe = () => {
                     <ul className={style.row}>
                         <li className={classForSkill} onClick={onSkillFilterClick}>My skills</li>
                         <li className={classForExperience} onClick={onExperienceFilterClick}>Experience</li>
-                        <li className={classForEducation}
-                            onClick={onEducationFilterClick}>Education &amp; Certification
-                        </li>
+                        <li className={classForEducation} onClick={onEducationFilterClick}>Education</li>
                     </ul>
                     <div className={style.column}>
                         {column === 'skill'

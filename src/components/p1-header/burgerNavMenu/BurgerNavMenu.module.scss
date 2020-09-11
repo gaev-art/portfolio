@@ -3,17 +3,11 @@
 
 .navMenu {
     @include flex(column-reverse, space-between, center, nowrap);
-    //width: 300px;
-    //background: red;
+    padding: 10px;
 
 
     .menuItems {
         @include flex(column, space-between, center, nowrap);
-        //width: 300px;
-
-
-
-
 
     }
 

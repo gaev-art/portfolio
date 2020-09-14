@@ -8,11 +8,11 @@ import {store} from './components/p5-contacts/bll/store';
 
 ReactDOM.render(
     <Provider store={store}>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+        <React.StrictMode>
+            <App/>
+        </React.StrictMode>
     </Provider>,
-  document.getElementById('root')
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

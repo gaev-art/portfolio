@@ -2,31 +2,34 @@ import React from 'react';
 import style from './Contacts.module.scss';
 import Heading from '../../../common/components/c1-heading/Heading';
 import Fade from 'react-reveal/Fade';
+import ContactsForm from './ContactsForm';
+import {useDispatch} from 'react-redux';
+import {sendMessage} from '../bll/contactsReducer';
 
 
 const Contacts = () => {
+    const dispatch = useDispatch()
 
-    const submit = (e) =>{
-        console.log(e.currentTarget)
+    const onSubmit = (formData) => {
+        dispatch(sendMessage(formData.name, formData.contact, formData.message))
     }
 
     return (
-    <div id='contacts' className={style.contactBlock}>
-        <div className={style.skillsContainer}>
-            <Heading heading={'Hire Me'}/>
-            <Fade left cascade>
-            <form className={style.form} onSubmit={submit}>
-                <inpu type='text' placeholder='Name'/>
-                <input type='text' placeholder='Email'/>
-                <textarea rows={10} placeholder='Message'/>
-                <button className={style.submitBtn} type='submit'>Send</button>
-            </form>
-            </Fade>
+        <div id='contacts' className={style.contactBlock}>
+            <div className={style.skillsContainer}>
+                <Heading heading={'Hire Me'}/>
+                <Fade left cascade>
+                    <ContactsForm onSubmit={onSubmit}/>
+                </Fade>
+            </div>
         </div>
-    </div>
     )
 };
 
 export default Contacts;
+
+
+
+
 
 

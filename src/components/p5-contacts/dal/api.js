@@ -1,14 +1,8 @@
 import axios from 'axios';
 
-export const instance = axios.create({
-    baseURL: `https://3010/`
-})
 
 
-
-export const sendContacts = {
-    sendMessage() {
-        return instance.post(`sendMessage`)
-            .then(res => res.data)
-    },
+export const api = {
+    sendMessage(name, contact, message) {
+        return axios.post(`https://smtp-server-1-for-portfolio.herokuapp.com/sendMessage`, {name, contact, message})}
 }

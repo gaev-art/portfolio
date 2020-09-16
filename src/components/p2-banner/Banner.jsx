@@ -11,7 +11,7 @@ const Banner = () => (
         <div id='banner' className={style.bannerContainer}>
             <Fade left cascade>
                 <div className={style.greeting}>
-                    <h3>Gaev Artsiom</h3>
+                    <h3>Artem Gaev</h3>
                     <ReactTypingEffect text={`React Developer`}/>
                     {/*<ReactTypingEffect text={`Front-end Developer`}/>*/}
                     <h5>from Belarus</h5>

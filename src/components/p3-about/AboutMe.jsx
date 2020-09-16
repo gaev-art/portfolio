@@ -62,14 +62,16 @@ const AboutMe = () => {
             </div>
             <div className={style.greeting}>
                 <Heading heading={'About Me'}/>
-                <p>Hi, my name is Gaev Artsiom, I am a front-end developer from Minsk.
-                    To my personal qualities I can include: responsibility, dedication and punctuality.
-                    Always open to exploring new technologies.
-                    I quickly find a common language with people, I easily join the new team.
-                    I love and know how to work in a team.
-                    In my free time I go in for sports: orienteering, cycling tourism, I go to the gym.
-                    I solve problems on Codewars.
-                    I am ready to work hard to develop in the IT field.</p>
+                <p>Hello, i'm Artem Gaev. I'm a front-end developer from Minsk. I can describe my personal qualities as
+                    responsibility, goal-oriented person and punctuality.
+                    I'm an open-minded person and always ready for learning new technologies. I 'm able to get along
+                    with different types of people and can say that i' m a good team player.
+                    In my free time i like doing different types of sport:sport orienteering, cycling tourism, going to
+                    the gym.
+                    Solve the problems on <a style={{color: '#C6C9D8'}}
+                                             href="https://www.codewars.com/users/ForsakenSR">Codewars</a>.
+                    Ready for hardwork and make progress in the IT sphere.
+                </p>
                 <div className={style.table}>
                     <ul className={style.row}>
                         <li className={classForSkill} onClick={onSkillFilterClick}>My skills</li>
@@ -126,17 +128,19 @@ const AboutMe = () => {
                             ? <div className={style.contentColumn}>
                                 <ul>
                                     <li>Freelance<br/>
-                                        Refinement of functionality and fix bugs of the CRM system  <br/>
-                                     May 2020 - till now</li>
+                                        Refinement of functionality and fix bugs of the CRM system <br/>
+                                        May 2020 - till now
+                                    </li>
 
                                 </ul>
                                 <ul><h4>Work not related to IT:</h4>
                                     <li>
-                                        <a style={{color: '#2fb529'}} href="https://ohrana.gov.by/wp/ru/protection-of-the-diplomatic-corps/history/">
+                                        <a style={{color: '#2fb529'}}
+                                           href="https://ohrana.gov.by/wp/ru/protection-of-the-diplomatic-corps/history/">
                                             The Department for Safety and Security of MIA of the Republic of Belarus
                                         </a><br/>
                                         Security inspector<br/>
-                                        Provided  the security of diplomatic missions and consular
+                                        Provided the security of diplomatic missions and consular
                                         institutions of foreign states.<br/>April 2017 - March 2020
                                     </li>
                                 </ul>

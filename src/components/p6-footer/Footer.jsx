@@ -8,7 +8,7 @@ import Fade from 'react-reveal/Fade';
 const Footer = () => (
     <footer className={style.footer}>
         <div className={style.footerContainer}>
-            <h2>Gaev Artsiom</h2>
+            <h2>Artem Gaev</h2>
             <Fade bottom cascade>
             <div className={style.icons}>
                 <a className={style.icon} href='https://github.com/gaev-art' >

@@ -25,7 +25,7 @@ const Projects = () => {
                         title={'Social Network'}/>
                     <Project
                         style={toDo}
-                        description={'Technologies used: React, Redux, TypeScript, React-redux, Redux-thunk, Redux-form, Axios, REST API'}
+                        description={'Technologies used: React, Redux, TypeScript, React-redux, Redux-thunk, Redux-form, Axios, REST API, SASS'}
                         title={'To Do List'}/>
                 </div>
             </div>

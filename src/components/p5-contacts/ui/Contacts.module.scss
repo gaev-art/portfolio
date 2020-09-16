@@ -12,23 +12,12 @@
 
         .form {
             width: 500px;
-            @include flex(column, flex-start, center, wrap);
+            @include flex(column, center, center, wrap);
 
             @media (max-width: 740px) {
-                width: 80%;
-            }
-
-            & input, & textarea {
                 width: 100%;
-                background: #252527;
-                margin-bottom: 15px;
-                padding: 8px 12px;
-                box-shadow: 0 0 4px #000;
-                border-radius: 4px;
-                border: 2px solid #4a4a4a;
-                color: $textColor;
-
             }
+
 
 
             .submitBtn {

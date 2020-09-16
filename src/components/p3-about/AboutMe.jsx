@@ -62,13 +62,14 @@ const AboutMe = () => {
             </div>
             <div className={style.greeting}>
                 <Heading heading={'About Me'}/>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                    alteration in some form, by injected humour, or randomised words which don't look even slightly
-                    believable. If you are going to use a passage of Lorem Ipsum by injected humour, or randomised words
-                    which don't look even slightly believable. If you are going to use a passage of Lorem IpsumThere are
-                    many variations of passages of Lorem Ipsum available, but the majority have suffered
-                    alteration in some form, by injected humour, or randomised words which don't look even slightly
-                    believable.</p>
+                <p>Hi, my name is Gaev Artsiom, I am a front-end developer from Minsk.
+                    To my personal qualities I can include: responsibility, dedication and punctuality.
+                    Always open to exploring new technologies.
+                    I quickly find a common language with people, I easily join the new team.
+                    I love and know how to work in a team.
+                    In my free time I go in for sports: orienteering, cycling tourism, I go to the gym.
+                    I solve problems on Codewars.
+                    I am ready to work hard to develop in the IT field.</p>
                 <div className={style.table}>
                     <ul className={style.row}>
                         <li className={classForSkill} onClick={onSkillFilterClick}>My skills</li>
@@ -112,9 +113,11 @@ const AboutMe = () => {
                                         </li>
                                         <li>
                                             Git & GitHub
-                                            <br/>
                                             <Stars stars={'4'} halfStar={'0'}/>
-
+                                        </li>
+                                        <li>
+                                            NodeJS
+                                            <Stars stars={'1'} halfStar={'0'}/>
                                         </li>
                                     </div>
                                 </ul>
@@ -122,7 +125,20 @@ const AboutMe = () => {
                         {column === 'experience'
                             ? <div className={style.contentColumn}>
                                 <ul>
-                                    <li>Freelance - May 2020</li>
+                                    <li>Freelance<br/>
+                                        Refinement of functionality and fix bugs of the CRM system  <br/>
+                                     May 2020 - till now</li>
+
+                                </ul>
+                                <ul><h4>Work not related to IT:</h4>
+                                    <li>
+                                        <a style={{color: '#2fb529'}} href="https://ohrana.gov.by/wp/ru/protection-of-the-diplomatic-corps/history/">
+                                            The Department for Safety and Security of MIA of the Republic of Belarus
+                                        </a><br/>
+                                        Security inspector<br/>
+                                        Provided  the security of diplomatic missions and consular
+                                        institutions of foreign states.<br/>April 2017 - March 2020
+                                    </li>
                                 </ul>
                             </div> : ''}
                         {column === 'education'
@@ -130,12 +146,7 @@ const AboutMe = () => {
                                 <ul>
                                     <li>
                                         <a style={{color: '#2fb529'}} href="https://it-incubator.by/">IT-INCUBATOR </a>
-                                        <span>
-                                            (ReactJS, Redux,Rest API, TypeScript) - Belarus, Minsk
-                                        </span>
-
-                                        <br/>
-                                        February 2020
+                                        (ReactJS, Redux,Rest API, TypeScript) - Belarus, Minsk<br/>February 2020
                                     </li>
                                     <li>Home study (HTML, CSS, JS) - Belarus, Minsk <br/> September 2019
                                     </li>

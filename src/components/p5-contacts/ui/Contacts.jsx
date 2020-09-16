@@ -11,7 +11,11 @@ const Contacts = () => {
     const dispatch = useDispatch()
 
     const onSubmit = (formData) => {
-        dispatch(sendMessage(formData.name, formData.contact, formData.message))
+        if (formData.name || formData.contact|| formData.message !== undefined) {
+            dispatch(sendMessage(formData.name, formData.contact, formData.message))
+        }else {
+
+        }
     }
 
     return (

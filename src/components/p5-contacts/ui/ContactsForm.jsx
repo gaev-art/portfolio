@@ -26,7 +26,7 @@ const ContactsForm = (props) => {
                 placeholder="Message"
                 validate={[required]}/>
             {/*{props.error && <div className={style.formSummaryError}>{props.error}</div>}*/}
-            <button className={style.submitBtn} type='submit'>Send</button>
+            <button disabled={props.loading} className={style.submitBtn} type='submit'>Send</button>
         </form>
     )
 }

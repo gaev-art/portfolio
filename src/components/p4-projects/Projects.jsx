@@ -21,10 +21,12 @@ const Projects = () => {
                 <div className={style.projects}>
                     <Project
                         style={social}
+                        href={'https://gaev-art.github.io/My-Social-Network/'}
                         description={'Technologies used: React, Redux, React-redux, Redux-thunk, Redux-form, Axios, reselect, REST API, Material-UI'}
                         title={'Social Network'}/>
                     <Project
                         style={toDo}
+                        href={'https://gaev-art.github.io/todo_ts/'}
                         description={'Technologies used: React, Redux, TypeScript, React-redux, Redux-thunk, Redux-form, Axios, REST API, SASS'}
                         title={'To Do List'}/>
                 </div>

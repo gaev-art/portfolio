@@ -1,13 +1,21 @@
 import {api} from '../dal/api';
 import {reset} from 'redux-form';
 
-let initialState = {
+const SET_LOADING = 'PORTFOLIO/SET_LOADING'
 
+
+let initialState = {
+    loading: false
 }
 
 
 export const contactsReducer = (state = initialState, action) => {
     switch (action.type) {
+        case SET_LOADING:
+            return {
+                ...state, loading: action.loading
+            }
+
         default:
             return state
 
@@ -15,8 +23,19 @@ export const contactsReducer = (state = initialState, action) => {
 }
 
 
+export const setLoadingSuccess = (loading) => ({type: SET_LOADING, loading})
+
+
 export const sendMessage = (name, contact, message) => async (dispatch) => {
-    await api.sendMessage(name, contact, message)
-    dispatch(reset('sendMessage'))
+    try {
+        dispatch(setLoadingSuccess(true))
+        await api.sendMessage(name, contact, message)
+        dispatch(reset('sendMessage'))
+        dispatch(setLoadingSuccess(false))
+        alert('Message sent')
+    } catch (e) {
+        console.log(e)
+    }
 }
+
 

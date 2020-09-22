@@ -14,7 +14,6 @@ const Contacts = () => {
     const onSubmit = (formData) => {
         if (formData.name || formData.contact || formData.message !== undefined) {
             dispatch(sendMessage(formData.name, formData.contact, formData.message))
-
         } else {
             alert('Required fields')
         }

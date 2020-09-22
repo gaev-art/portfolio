@@ -128,7 +128,7 @@ const AboutMe = () => {
                             ? <div className={style.contentColumn}>
                                 <ul>
                                     <li>Freelance<br/>
-                                        Refinement of functionality and fix bugs of the CRM system <br/>
+                                        (Worked with: Git, React / Redux, REST API, Material-UI) <br/>
                                         May 2020 - till now
                                     </li>
 

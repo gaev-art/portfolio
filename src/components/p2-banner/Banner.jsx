@@ -15,7 +15,8 @@ const Banner = () => (
                     <ReactTypingEffect text={`React Developer`}/>
                     {/*<ReactTypingEffect text={`Front-end Developer`}/>*/}
                     <h5>from Belarus</h5>
-                    <Button value={'CV'}/>
+                    <Button value={'CV'}
+                            href={'https://drive.google.com/file/d/1Um8G7ndFLqRYxI_qkaoJTJvn28g2S4Bm/view?usp=sharing'}/>
                 </div>
             </Fade>
         </div>

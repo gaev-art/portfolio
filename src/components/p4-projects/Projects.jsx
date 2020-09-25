@@ -4,6 +4,7 @@ import Project from './project/Project';
 import Heading from '../../common/components/c1-heading/Heading';
 import socialNetwork from '../../assets/images/socialnetwork.jpg'
 import todo from '../../assets/images/todolist.jpg'
+import snap_chat from '../../assets/images/chat-1.jpg'
 
 const Projects = () => {
 
@@ -12,6 +13,9 @@ const Projects = () => {
     }
     const toDo = {
         backgroundImage: `url(${todo})`
+    }
+    const chat = {
+        backgroundImage: `url(${snap_chat})`
     }
 
     return (
@@ -24,6 +28,11 @@ const Projects = () => {
                         href={'https://gaev-art.github.io/My-Social-Network/'}
                         description={'Technologies used: React, Redux, React-redux, Redux-thunk, Redux-form, Axios, reselect, REST API, Material-UI'}
                         title={'Social Network'}/>
+                    <Project
+                        style={chat}
+                        href={'https://gaev-art.github.io/snap_chat/#/login'}
+                        description={'Technologies used: NodeJS, React, Redux, WebSockets, TypeScript, React-redux, Redux-thunk, Redux-form, SASS'}
+                        title={'Chat'}/>
                     <Project
                         style={toDo}
                         href={'https://gaev-art.github.io/todo_ts/'}

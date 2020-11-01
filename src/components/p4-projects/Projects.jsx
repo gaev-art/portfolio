@@ -33,11 +33,11 @@ const Projects = () => {
                         href={'https://gaev-art.github.io/snap_chat/#/login'}
                         description={'Technologies used: NodeJS, React, Redux, WebSockets, TypeScript, React-redux, Redux-thunk, Redux-form, SASS'}
                         title={'Chat'}/>
-                    <Project
-                        style={toDo}
-                        href={'https://gaev-art.github.io/todo_ts/'}
-                        description={'Technologies used: React, Redux, TypeScript, React-redux, Redux-thunk, Redux-form, Axios, REST API, SASS'}
-                        title={'To Do List'}/>
+                    {/*<Project*/}
+                    {/*    style={toDo}*/}
+                    {/*    href={'https://gaev-art.github.io/todo_ts/'}*/}
+                    {/*    description={'Technologies used: React, Redux, TypeScript, React-redux, Redux-thunk, Redux-form, Axios, REST API, SASS'}*/}
+                    {/*    title={'To Do List'}/>*/}
                 </div>
             </div>
         </div>

@@ -7,7 +7,6 @@ import ReactTypingEffect from 'react-typing-effect';
 
 const Banner = () => (
     <div className={style.banner}>
-
         <div id='banner' className={style.bannerContainer}>
             <Fade left cascade>
                 <div className={style.greeting}>

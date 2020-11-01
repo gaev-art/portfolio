@@ -2,23 +2,19 @@
 @import "src/common/styles/sass/mixins";
 
 
-
 .header {
-    width: 100%;
-    background: $bgColor_2;
-    opacity: 0.9;
+  width: 100%;
+  background: $bgColor_2;
+  opacity: 0.9;
 
-    position: fixed;
-    z-index: 999;
+  position: fixed;
+  z-index: 999;
 
-    .headerContainer {
-        @include container();
-        @include flex(row, center, center, wrap);
+  .headerContainer {
+    @include container();
+    @include flex(row, center, center, wrap);
 
-
-
-    }
-
+  }
 
 }
 

@@ -2,26 +2,26 @@
 @import "src/common/styles/sass/mixins";
 
 .navMenu {
-    @include flex(column-reverse, space-between, center, nowrap);
-    padding: 10px;
+  @include flex(column-reverse, space-between, center, nowrap);
+  padding: 10px;
 
 
-    .menuItems {
-        @include flex(column, space-between, center, nowrap);
+  .menuItems {
+    @include flex(column, space-between, center, nowrap);
 
-    }
+  }
 
-    .MenuIcons {
-        width: 100px;
-        margin: 10px;
-        @include flex(row, space-between, center, nowrap);
+  .MenuIcons {
+    width: 100px;
+    margin: 10px;
+    @include flex(row, space-between, center, nowrap);
 
-    }
+  }
 
-    @media (min-width: 520px) {
-        display: none;
+  @media (min-width: 625px) {
+    display: none;
 
-    }
+  }
 
 }
 

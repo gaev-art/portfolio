@@ -2,16 +2,14 @@
 @import "src/common/styles/sass/mixins";
 
 
-
-
 .navMenuIcon {
-    text-decoration: none;
-    color: $textColor;
+  text-decoration: none;
+  color: $textColor;
 
-    &:hover {
-        transform: translateY(-3px);
-        color: $accentColor;
-    }
+  &:hover {
+    transform: translateY(-3px);
+    color: $accentColor;
+  }
 }
 
 

@@ -3,20 +3,20 @@
 
 
 .projectsBlock {
-    background: $bgColor_2;
-    min-height: 100vh;
+  background: $bgColor_2;
+  min-height: 100vh;
 
-    .projectsContainer {
-        @include container();
-        @include flex(column, flex-start, center, nowrap);
-        padding: 120px 0;
+  .projectsContainer {
+    @include container();
+    @include flex(column, flex-start, center, nowrap);
+    padding: 120px 0;
 
-        .projects {
-            width: 100%;
-            @include flex(row, center, center, wrap);
+    .projects {
+      width: 100%;
+      @include flex(row, center, center, wrap);
 
-        }
     }
+  }
 }
 
 

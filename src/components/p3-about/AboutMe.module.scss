@@ -31,7 +31,7 @@
 
     .greeting {
       @include text($fontFamily_2, 18px, 1.2em, 500);
-        color:$descriptionTextColor;
+      color: $descriptionTextColor;
       width: 50%;
       margin-bottom: 30px;
       text-align: center;
@@ -62,7 +62,7 @@
 
         .row {
           @include flex(row, space-around, center, wrap);
-            padding: 0;
+          padding: 0;
 
           .active {
             @include text($fontFamily_2, 18px, 1.2em, 700);
@@ -122,7 +122,6 @@
               margin-bottom: 20px;
               padding: 0;
               list-style: none;
-
 
               & a {
                 text-decoration: none;

@@ -4,36 +4,36 @@
 
 .formControl {
 
+  width: 100%;
+  //@include flex(column, flex-start, center, wrap);
+
+
+  &.error input,
+  &.error textarea {
+    border: solid red 2px;
+  }
+
+  &.error span {
+    color: red;
+  }
+
+  .formSummaryError {
+    border: red 1px solid;
+    padding: 5px;
+    color: indianred;
+  }
+
+  & input, & textarea {
     width: 100%;
-    //@include flex(column, flex-start, center, wrap);
+    background: #252527;
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    box-shadow: 0 0 4px #000;
+    border-radius: 4px;
+    border: 2px solid #4a4a4a;
+    color: $textColor;
 
-
-    &.error input,
-    &.error textarea {
-        border: solid red 2px;
-    }
-
-    &.error span {
-        color: red;
-    }
-
-    .formSummaryError {
-        border: red 1px solid;
-        padding: 5px;
-        color: indianred;
-    }
-
-    & input, & textarea {
-        width: 100%;
-        background: #252527;
-        margin-bottom: 15px;
-        padding: 8px 12px;
-        box-shadow: 0 0 4px #000;
-        border-radius: 4px;
-        border: 2px solid #4a4a4a;
-        color: $textColor;
-
-    }
+  }
 
 
 }

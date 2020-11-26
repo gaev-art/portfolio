@@ -11,10 +11,10 @@ const Footer = () => (
             <h2>Artem Gaev</h2>
             <Fade bottom cascade>
             <div className={style.icons}>
-                <a className={style.icon} href='https://github.com/gaev-art' >
+                <a className={style.icon} href='https://github.com/gaev-art'>
                     <FontAwesomeIcon icon={faGithub} size='3x'/>
                 </a>
-                <a className={style.icon} href='https://www.linkedin.com/in/artsiom-gaev-29a4551a8/'>
+                <a className={style.icon} href='https://www.linkedin.com/in/artem-gaev-29a4551a8/'>
                     <FontAwesomeIcon icon={faLinkedin} size='3x'/>
                 </a>
                 <a className={style.icon} href='https://telegram.me/gaev_art'>

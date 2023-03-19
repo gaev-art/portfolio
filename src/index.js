@@ -1,21 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './components/App'
-import * as serviceWorker from './serviceWorker'
-import {Provider} from 'react-redux'
-import {store} from './components/p5-contacts/bll/store'
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <App/>
-    </React.StrictMode>
-  </Provider>,
-  document.getElementById('root')
-)
+import "./i18n";
+import "./index.css";
+import { App } from "./App";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister()
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
+  <React.StrictMode>
+    <h1 className="text-3xl font-bold underline">
+      <App />
+    </h1>
+  </React.StrictMode>
+);

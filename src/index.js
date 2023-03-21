@@ -12,6 +12,9 @@ import {
 
 import "./i18n";
 import "./index.css";
+import { Banner } from "./pages/banner/Banner";
+import { AboutMe } from "./pages/about/AboutMe";
+import { Projects } from "./pages/projects/Projects";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -22,7 +25,10 @@ const router = createBrowserRouter(
       path="/"
       element={
         <Suspense fallback={<div>Loading...</div>}>
-          <div className=" flex h-[70px] justify-center items-center gap-10 w-full">
+          <div
+            style={{ boxShadow: "0 0 5px rgba(255, 255, 255, 0.5)" }}
+            className="flex h-[70px] justify-center items-center gap-10 w-full"
+          >
             <NavLink to="/aboutMe">aboutMe</NavLink>
             <NavLink to="/projects">projects</NavLink>
           </div>
@@ -30,9 +36,9 @@ const router = createBrowserRouter(
         </Suspense>
       }
     >
-      <Route path="/" element={<div>Main</div>} />
-      <Route path="/aboutMe" element={<div>AboutMe</div>} />
-      <Route path="/projects" element={<div>Projects</div>} />
+      <Route path="/" element={<Banner />} />
+      <Route path="/aboutMe" element={<AboutMe />} />
+      <Route path="/projects" element={<Projects />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Route>
   )

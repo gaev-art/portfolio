@@ -1,12 +1,14 @@
 export const resources = {
   en: {
     translation: {
-      "Welcome to React": "Welcome to React!",
+      about_me: "About me",
+      my_projects: "My projects",
     },
   },
   ru: {
     translation: {
-      "Welcome to React": "Привет Реакт!",
+      about_me: "Обо мне",
+      my_projects: "Мои проекты",
     },
   },
 };

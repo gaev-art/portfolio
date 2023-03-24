@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
     background: #000000;
     font-family: "Poppins", sans-serif;
@@ -17,25 +17,37 @@ code {
 }
 
 .banner {
+    position: fixed;
+    top: 40px;
     min-height: 90vh;
     background-image: url("./assets/img/banner.jpg");
     background-position: 70% top;
     background-repeat: no-repeat;
 }
 
+a {
+    font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+    .banner {
+        background-position: 80% top;
+        background-size: 100vh;
+
+    }
+}
 
 @media (max-width: 768px) {
     .banner {
         background-position: 90% top;
-        background-size: 1000px;
+        background-size: 90vh;
     }
 }
 
-
-@media (max-width: 420px) {
+@media (max-width: 380px) {
     .banner {
-        background-position: 100% top;
-        background-size: 650px;
+        background-position: 90% -16%;
+        background-size: 100vh;
     }
 }
 

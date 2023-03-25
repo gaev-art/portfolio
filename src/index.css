@@ -1,15 +1,53 @@
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    cursor: default;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+body {
+    width: 100vw;
+    margin: 0 auto;
+    background: #000000;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    cursor: default;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.banner {
+    position: fixed;
+    top: 40px;
+    min-height: 90vh;
+    background-image: url("./assets/img/banner.jpg");
+    background-position: 70% top;
+    background-repeat: no-repeat;
+}
+
+a {
+    font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+    .banner {
+        background-position: 80% top;
+        background-size: 100vh;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        background-position: 90% top;
+        background-size: 90vh;
+    }
+}
+
+@media (max-width: 380px) {
+    .banner {
+        background-position: 90% -16%;
+        background-size: 100vh;
+    }
+}
+

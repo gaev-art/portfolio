@@ -14,7 +14,7 @@ export const icons = [
   { href: "https://telegram.me/gaev_art", icon: faTelegram },
   { href: "mailto:forsakensr@gmail.com", icon: faEnvelope },
   {
-    href: "https://github.com/gaev-art/gaev-art/blob/main/CV.pdf",
+    href: "https://drive.google.com/file/d/1moN0l97T8CaylsWANp1w8SDZLmgqgLeh/view?usp=sharing",
     icon: faAddressCard,
   },
 ];

@@ -3,5 +3,5 @@ import { useTranslation } from "react-i18next";
 
 export const Projects = () => {
   const { t } = useTranslation();
-  return <div> {t("my_projects")}</div>;
+  return <div className="mt-20 fa-layers-text"> {t("my_projects")}</div>;
 };

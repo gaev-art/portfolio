@@ -3,12 +3,12 @@ import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { icons } from "../shared.constants";
 import { Icon } from "./Icon";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export const Header = () => {
   const { t, i18n } = useTranslation();
-
+  let location = useLocation();
   const [isActive, setIsActive] = React.useState(false);
   const [languages, setLanguages] = React.useState(["ru", "en"]);
   const [language, setLanguage] = React.useState(i18n.language);
@@ -56,7 +56,26 @@ export const Header = () => {
             {t("my_projects")}
           </NavLink>
         </Popover.Group>
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end relative mr-5">
+          {location.pathname !== "/" && (
+            <NavLink
+              style={{
+                textDecoration: "none",
+                color: "#FF4F32FF",
+                position: "absolute",
+                top: "-7px",
+                right: "20%",
+                fontWeight: "400",
+                fontSize: "30px",
+                transform: "rotate(45deg)",
+              }}
+              to="/"
+            >
+              {" "}
+              +
+            </NavLink>
+          )}
           <div
             onClick={openMenu}
             className="flex w-[60px] h-[28px] justify-center rounded-[10px] items-center p-1"
@@ -116,6 +135,13 @@ export const Header = () => {
               <div className="flex flex-row">
                 <div className="space-y-2 py-2 flex-1 relative">
                   <NavLink
+                    to="/"
+                    className="block w-9/12 rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black uppercase"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {t("main")}
+                  </NavLink>
+                  <NavLink
                     to="/aboutMe"
                     className="block w-9/12 rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black uppercase"
                     onClick={() => setMobileMenuOpen(false)}
@@ -132,7 +158,9 @@ export const Header = () => {
                   <div className="flex flex-1 justify-end items-center ">
                     <div
                       onClick={openMenu}
-                      className="flex w-[60px] h-[28px] justify-center rounded-[10px] items-center p-1 absolute right-0 top-7"
+                      className="
+                      flex w-[60px] h-[28px] justify-center rounded-[10px] items-center p-1 absolute right-0
+                      top-7 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black"
                       style={{
                         boxShadow: !isActive
                           ? "0 0 2px rgba(255, 255, 255, 0.5)"
@@ -150,9 +178,10 @@ export const Header = () => {
                           : "hidden"
                       }
                     >
-                      <ul>
+                      <ul className="w-full flex items-center flex-col ">
                         {languages.map((language) => (
                           <li
+                            className="flex justify-center w-full text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black rounded-[5px]"
                             key={language}
                             onClick={() => {
                               setLanguage(language);
@@ -160,7 +189,7 @@ export const Header = () => {
                               setIsActive(false);
                             }}
                           >
-                            <span className="uppercase font-bold text-[#4a4a4a] hover:text-white">
+                            <span className="uppercase font-bold">
                               {language}
                             </span>
                           </li>

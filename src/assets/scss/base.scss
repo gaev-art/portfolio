@@ -1,0 +1,17 @@
+%noselect {
+  user-select: none;
+}
+
+%mirror {
+  transform: scale(-1, 1);
+}
+
+%smoothscroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+%hidescroll {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

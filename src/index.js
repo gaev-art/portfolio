@@ -9,12 +9,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import "./i18n";
-import "./index.css";
-import { Banner } from "./pages/banner/Banner";
-import { AboutMe } from "./pages/about/AboutMe";
-import { Projects } from "./pages/projects/Projects";
 import { Header } from "./shared/components/Header";
+
+import "./i18n";
+import "./assets/scss/style.scss";
+import { Main } from "./pages/Main";
+import { AboutPage } from "./pages/About";
+import { ProjectsPage } from "./pages/Projects";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -25,19 +26,22 @@ const router = createBrowserRouter(
       path="/"
       element={
         <Suspense fallback={<div>Loading...</div>}>
-          <Header />
-          <Outlet />
+          <div className="wrapper">
+            <Header />
+            <main className="page">
+              <Outlet />
+            </main>
+          </div>
         </Suspense>
       }
     >
-      <Route path="/" element={<Banner />} />
-      <Route path="/aboutMe" element={<AboutMe />} />
-      <Route path="/projects" element={<Projects />} />
+      <Route path="/" element={<Main />} />
+      <Route path="/aboutMe" element={<AboutPage />} />
+      <Route path="/projects" element={<ProjectsPage />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Route>
   )
 );
-
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />

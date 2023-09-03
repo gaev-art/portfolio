@@ -26,18 +26,24 @@ const router = createBrowserRouter(
       path="/"
       element={
         <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
+      }
+    >
+      <Route path="/" element={<Main />} />
+      <Route
+        element={
           <div className="wrapper">
             <Header />
             <main className="page">
               <Outlet />
             </main>
           </div>
-        </Suspense>
-      }
-    >
-      <Route path="/" element={<Main />} />
-      <Route path="/aboutMe" element={<AboutPage />} />
-      <Route path="/projects" element={<ProjectsPage />} />
+        }
+      >
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+      </Route>
       <Route path="*" element={<Navigate to="/" />} />
     </Route>
   )

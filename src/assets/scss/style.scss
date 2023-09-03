@@ -39,6 +39,25 @@ $responsiveType: 1;
 @import "null";
 
 //=====================================================================================================================================
+
+#main {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  font-size: 5vh;
+
+  a {
+    color: #000;
+    transition: all 0.3s;
+  }
+
+  canvas {
+    position: fixed;
+    z-index: -1;
+  }
+}
+
 body {
   background: $mainBgColor;
   font-weight: 400;

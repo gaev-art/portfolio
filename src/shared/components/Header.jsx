@@ -16,7 +16,7 @@ export const Header = () => {
             <div className="menu__body-inner">
               <ul className="menu__list">
                 <li className="menu__item">
-                  <NavLink onClick={menuClose} to="/aboutMe">about_me</NavLink>
+                  <NavLink onClick={menuClose} to="/about">about_me</NavLink>
                 </li>
                 <li className="menu__item">
                   <NavLink onClick={menuClose} to="/projects">my_projects</NavLink>

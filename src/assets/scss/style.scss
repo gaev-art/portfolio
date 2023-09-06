@@ -66,6 +66,16 @@ $responsiveType: 1;
       opacity: 0;
       font-weight: 400;
       @include adaptiveValue("font-size", 20, 18, $containerWidth, 992, 0);
+
+      @media (max-width: $mobile) {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      color: #000;
+      text-shadow: 0 0 200px #fff;
     }
 
     &:hover {

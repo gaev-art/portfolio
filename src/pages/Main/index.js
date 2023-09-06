@@ -159,8 +159,8 @@ void main() {
 
   useEffect(() => {
     requestAnimationFrame(animation);
-    animation()
-  }, [])
+    animation();
+  }, []);
 
 
   return (

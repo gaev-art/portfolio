@@ -1,11 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 
 
 export const Main = () => {
 
+  const [animationStarted, setAnimationStarted] = useState(false);
+
   function animation() {
-    console.clear();
+
+    if (animationStarted) {
+      return;
+    }
+    setAnimationStarted(true);
+
     const canvas = document.createElement('canvas');
     const main = document.querySelector('#main')
     main.append(canvas);
@@ -67,27 +74,24 @@ void main() {
     gl.detachShader(prg, fs);
     gl.deleteShader(fs);
 
-    // ---- End of antipattern ----
-
     const $p = gl.getAttribLocation(prg, 'p');
     const $c = gl.getUniformLocation(prg, 'c');
 
     const va = gl.createVertexArray();
     gl.bindVertexArray(va);
 
-    const N = 300; // n triangles
-
+    const N = 300;
     let ps;
     {
       ps = new Float32Array(2 + N * 2 * 2);
-      ps[0] = 0; // clip space center
+      ps[0] = 0;
       ps[1] = 0;
       let j = 2;
       for (let i = 0; i < N; ++i) {
-        ps[j++] = Math.random() * 2 - 1; //x 
-        ps[j++] = Math.random() * 2 - 1; //y
-        ps[j++] = Math.random() * 2 - 1; //x 
-        ps[j++] = Math.random() * 2 - 1; //y
+        ps[j++] = Math.random() * 2 - 1;
+        ps[j++] = Math.random() * 2 - 1;
+        ps[j++] = Math.random() * 2 - 1;
+        ps[j++] = Math.random() * 2 - 1;
       }
     }
 
@@ -97,10 +101,10 @@ void main() {
     gl.enableVertexAttribArray($p);
     gl.vertexAttribPointer(
       $p,
-      2, gl.FLOAT, // two 32b-float (8bytes)
+      2, gl.FLOAT,
       false,
-      0, // skip n byte to fetch next
-      0  // skip n byte to fetch first
+      0,
+      0
     );
 
     let idxs;
@@ -120,7 +124,6 @@ void main() {
 
     gl.bindVertexArray(null);
 
-    //----- render
 
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
     gl.clearColor(0.1, 0.1, 0.1, 1);
@@ -134,17 +137,16 @@ void main() {
 
     function f() {
       gl.clear(gl.COLOR_BUFFER_BIT);
-      gl.uniform4fv($c, [0.2, 0.2, 0.2, 0.02]);
+      gl.uniform4fv($c, [0.3, 0.3, 0.3, 0.03]);
       gl.drawElements(
         gl.TRIANGLES,
-        idxs.length, // n indices
-        gl.UNSIGNED_SHORT, // ui16
-        0 // skip n bytes to fetch first
+        idxs.length,
+        gl.UNSIGNED_SHORT,
+        0
       );
     }
     f();
 
-    // ---
     gl.bindBuffer(gl.ARRAY_BUFFER, buf);
 
     document.body.onmousemove = (e) => {
@@ -156,13 +158,18 @@ void main() {
   }
 
   useEffect(() => {
+    requestAnimationFrame(animation);
     animation()
   }, [])
 
 
   return (
     <main id='main'>
-      <NavLink to={'/about'}>Portfolio</NavLink>
-    </main>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
+        <h1>GAEV ARTEM </h1>
+        <h2>FRONTEND DEVELOPER</h2>
+        <NavLink to={'/about'}>about me</NavLink>
+      </div>
+    </main >
   )
 }

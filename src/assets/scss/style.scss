@@ -4,16 +4,16 @@
 
 
 //=====================================================================================================================================
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap);
 
-$fontFamily: "Montserrat";
+$fontFamily: "Poppins";
 $fontSize: rem(20);
 
 // color: =======================================================================================================================================
 $mainTextColor: #fff;
 $accentTextColor: #85D8CE;
 
-$mainBgColor: #050615;
+$mainBgColor: #1a1a1a;
 
 //=====================================================================================================================================
 $minWidth: 320;
@@ -47,9 +47,36 @@ $responsiveType: 1;
   height: 100vh;
   font-size: 5vh;
 
-  a {
-    color: #000;
-    transition: all 0.3s;
+  div {
+    color: #1a1a1a46;
+    text-align: center;
+
+    h1 {
+      font-weight: 700;
+      @include adaptiveValue("font-size", 50, 40, $containerWidth, 992, 0);
+    }
+
+    h2 {
+      font-weight: 500;
+      @include adaptiveValue("font-size", 35, 26, $containerWidth, 992, 0);
+
+    }
+
+    a {
+      opacity: 0;
+      font-weight: 400;
+      @include adaptiveValue("font-size", 20, 18, $containerWidth, 992, 0);
+    }
+
+    &:hover {
+      color: #000;
+      text-shadow: 0 0 200px #fff;
+
+      a {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    }
   }
 
   canvas {
@@ -83,11 +110,6 @@ body {
   >main {
     flex: 1 1 auto;
     @include adaptiveValue("padding-top", 100, 50);
-
-
-    h1 {
-      @include adaptiveValue("font-size", 40, 16, $containerWidth, 992, 0);
-    }
   }
 
   >* {

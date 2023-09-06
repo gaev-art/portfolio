@@ -1,0 +1,183 @@
+@use "sass:math";
+
+@import "mixins";
+
+
+//=====================================================================================================================================
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap);
+
+$fontFamily: "Poppins";
+$fontSize: rem(20);
+
+// color: =======================================================================================================================================
+$mainTextColor: #fff;
+$accentTextColor: #85D8CE;
+
+$mainBgColor: #1a1a1a;
+
+//=====================================================================================================================================
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1430;
+$containerPadding: 50;
+
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+//=====================================================================================================================================
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+
+
+// Adaptive type:
+// 1 = responsiveness (container has no breakpoints),
+// 2 = breakpoint-based (container changes its width according to breakpoints)
+$responsiveType: 1;
+
+
+@import "null";
+
+//=====================================================================================================================================
+
+#main {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  font-size: 5vh;
+
+  div {
+    color: #1a1a1a46;
+    text-align: center;
+
+    h1 {
+      font-weight: 700;
+      @include adaptiveValue("font-size", 50, 40, $containerWidth, 992, 0);
+    }
+
+    h2 {
+      font-weight: 500;
+      @include adaptiveValue("font-size", 35, 26, $containerWidth, 992, 0);
+
+    }
+
+    a {
+      opacity: 0;
+      font-weight: 400;
+      @include adaptiveValue("font-size", 20, 18, $containerWidth, 992, 0);
+
+      @media (max-width: $mobile) {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      color: #000;
+      text-shadow: 0 0 200px #fff;
+    }
+
+    &:hover {
+      color: #000;
+      text-shadow: 0 0 200px #fff;
+
+      a {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    }
+  }
+
+  canvas {
+    position: fixed;
+    z-index: -1;
+  }
+}
+
+body {
+  background: $mainBgColor;
+  font-weight: 400;
+  line-height: math.div(28, 20);
+  // display: flex;
+  // flex-direction: column;
+  // min-height: 100vh;
+  margin: 0;
+
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  >main {
+    flex: 1 1 auto;
+    @include adaptiveValue("padding-top", 100, 50);
+  }
+
+  >* {
+    min-width: 0;
+  }
+}
+
+
+@if ($responsiveType==1) {
+
+  // responsiveness
+  [class*="__container"] {
+    @if ($maxWidthContainer>0) {
+      max-width: rem($maxWidthContainer);
+      box-sizing: content-box;
+      margin: 0 auto;
+    }
+
+    @if ($containerPadding>0) {
+      padding: 0 rem(math.div($containerPadding, 2));
+    }
+  }
+}
+
+@else {
+
+  // breakpoint-based
+  [class*="__container"] {
+    margin: 0 auto;
+
+    @if ($maxWidthContainer>0) {
+      max-width: rem($maxWidthContainer);
+      box-sizing: content-box;
+    }
+
+    @else {
+      @if ($containerPadding>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+
+    @media (max-width: $pc) {
+      max-width: rem(970);
+    }
+
+    @media (max-width: $tablet) {
+      max-width: rem(750);
+    }
+
+    @media (max-width: $mobile) {
+      max-width: none;
+
+      @if ($containerPadding>0 and $maxWidthContainer>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+  }
+}
+
+@import "base";
+@import "header";
